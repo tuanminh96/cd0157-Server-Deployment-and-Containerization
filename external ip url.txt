@@ -1,0 +1,6 @@
+af8a6ebf364184fb1b449ae5bbd2d5d2-914709930.us-east-1.elb.amazonaws.com
+
+
+export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST af8a6ebf364184fb1b449ae5bbd2d5d2-914709930.us-east-1.elb.amazonaws.com/auth  | jq -r '.token'`
+curl --request GET 'af8a6ebf364184fb1b449ae5bbd2d5d2-914709930.us-east-1.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
+
